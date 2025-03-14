@@ -21,7 +21,7 @@
 
 ## Configuration Examples
 
-**1. Both ports in Access mode (No trunking)** \
+**1. Both ports in Access mode (No trunking)** 
 + SW1 & SW2 – Access mode (PC, printer, etc.
 ```
 SW1(config)# interface FastEthernet0/1
@@ -36,7 +36,7 @@ SW2(config-if)# no shutdown
 ```
 +  **Result:** Ports are in **Access mode**, carrying only **VLAN 10**.
 
-**2. One port Access, the other Dynamic Auto (No trunking)** \
+**2. One port Access, the other Dynamic Auto (No trunking)** 
 + SW1 – Access, SW2 – Dynamic Auto
 ```
 SW1(config)# interface FastEthernet0/1
@@ -50,7 +50,7 @@ SW2(config-if)# no shutdown
 ```
 + **Result:** Access mode – Dynamic Auto waits, but Access does not negotiate trunking.
 
-**3. One port Dynamic Auto, the other Dynamic Desirable (Trunk is formed)** \
+**3. One port Dynamic Auto, the other Dynamic Desirable (Trunk is formed)** 
 + SW1 – Dynamic Auto, SW2 – Dynamic Desirable
 ```
 SW1(config)# interface FastEthernet0/1
@@ -63,7 +63,7 @@ SW2(config-if)# no shutdown
 ```
 + Result: Trunk mode – Desirable convinces Auto to form a trunk.
 
-**4. Both ports in Dynamic Desirable mode (Trunk is formed)** \
+**4. Both ports in Dynamic Desirable mode (Trunk is formed)** 
 + SW1 & SW2 – Dynamic Desirable
 ```
 SW1(config)# interface FastEthernet0/1
@@ -76,7 +76,7 @@ SW2(config-if)# no shutdown
 ```
 + **Result: Trunk mode** – Both ports want a trunk, so they negotiate it successfully.
 
-**5. One port Dynamic Auto, the other Trunk (Trunk is formed)** \
+**5. One port Dynamic Auto, the other Trunk (Trunk is formed)** 
 + SW1 – Dynamic Auto, SW2 – Trunk
 ```
 SW1(config)# interface FastEthernet0/1
@@ -89,7 +89,7 @@ SW2(config-if)# no shutdown
 ```
 + **Result: Trunk mode** – Trunk is enforced.
 
-**6. Both ports in Trunk mode (Fixed trunk, ignores DTP negotiation)** \
+**6. Both ports in Trunk mode (Fixed trunk, ignores DTP negotiation)** 
 + SW1 & SW2 – Trunk mode
 ```
 SW1(config)# interface FastEthernet0/1
